@@ -5,11 +5,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 finviz_url = 'https://finviz.com/quote.ashx?t='
-tickers = ['AMZN', 'GOOG', 'FB']
+tickers = ['AMZN', 'GOOG','META']
 
 news_tables = {}
 for ticker in tickers:
     url = finviz_url + ticker
+    print(url)
 
     req = Request(url=url, headers={'user-agent': 'my-app'})
     response = urlopen(req)
